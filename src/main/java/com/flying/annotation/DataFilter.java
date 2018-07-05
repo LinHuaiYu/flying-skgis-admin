@@ -7,7 +7,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * yoyoyoyoyoy数据过滤
+ * 数据过滤
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
