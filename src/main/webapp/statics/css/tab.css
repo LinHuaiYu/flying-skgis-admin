@@ -1,0 +1,23 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+.tab { position:relative; margin-top: 4px; overflow:hidden;}
+.tab .btn { position:absolute; top:2px; right: 0; width:62px; height:20px; background:none;}
+/* TAB 切换效果 */  
+.tabCon { height:28px; text-align:center; overflow:hidden; }
+/*
+.tabCon { height:28px; background: url(../images/tab02.gif) left bottom repeat-x; text-align:center; overflow:hidden;}
+*/
+.tabCon li { float:left; width: 82px; height: 28px; margin-right:1px; cursor:pointer; line-height:28px;}
+/* 控制显示与隐藏css类 */  
+.tabCon li { background: url(../images/tab01.gif) left bottom no-repeat; color:#444; }
+.tabCon li.l_sel { background:url(../images/tab01.gif) 0 0 no-repeat; color:#fff; font-weight:bold; }
+.tabSec { height:22px; padding:4px; background:#deeefd url(../images/titbg.gif) 0 0 repeat-x; border:1px #bbcddb solid; border-top: none; color:#363233; text-align:center; overflow:hidden}
+.tabSec li { float:left; width: 66px; height: 22px; margin-right:4px; cursor:pointer; line-height:22px;}
+.tabSec li.l_sel { width:66px; height:22px; margin-right:4px; background:url(../images/tab03.gif) no-repeat; line-height:22px; overflow:hidden;}
+
+.tabCon1 { position:absolute; top:5px; right:5px; height:23px; text-align:center; overflow:hidden; }
+.tabCon1 li { float:left; width: 82px; height: 23px; margin-right:1px; cursor:pointer; line-height:23px;}
+/* 控制显示与隐藏css类 */  
+.tabCon1 li { background: url(../images/tab01.gif) 0 -29px no-repeat; color:#444; }
+.tabCon1 li.l_sel { background:url(../images/tab01.gif) 0 0 no-repeat; color:#fff; font-weight:bold; }

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	#parse("common/common.html")
+</head>
+<body>
+	<div class="main">
+        <div class="current">
+	        <div class="curCon"><span>当前位置：</span> 用户管理</div>
+        </div>
+    </div>
+    <div id="Table1">
+        <div>
+            <table class="table01">
+                <tbody>
+                    <tr>
+                        <td class="tName">行政区划</td>
+                        <td colspan="3">
+                            <input name="selXzqhdm" type="hidden" id="selXzqhdm" value="441421|0">
+                            <input name="txtXzqhdm" type="text" id="txtXzqhdm" class="input" style="width:80%" readonly="readonly" value="广东省梅州市梅县">&nbsp;
+                            <a href="http://113.108.186.71/ymgis/baseinfo/ResetlementStat.aspx#" id="butXzqhdm" onclick="OpenWindowTree(&#39;../tool/tree.aspx&#39;,&#39;441421&#39;,&#39;梅县&#39;,&#39;2&#39;,&#39;5&#39;)">
+                                <img alt="" src="../statics/images/xzqhdm.png">
+                            </a>
+                        </td>
+                        <td class="tName">移民户性质</td>
+                        <td>
+                            <select name="ddlhavedcheck1" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ddlhavedcheck1\&#39;,\&#39;\&#39;)&#39;, 0)"
+                                id="ddlhavedcheck1" style="width:100px;">
+                                <option selected="selected" value="">全部</option>
+                                <option value="A01">符合政策人口</option>
+                                <option value="B">不符合政策人口</option>
+                                <option value="C">未核定到人</option>
+
+                            </select>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tName">扶持方式</td>
+                        <td>
+                            <select name="ddlFCFS" id="ddlFCFS" style="width:80px;">
+                                <option selected="selected" value="-1">全部</option>
+                                <option value="0">直补到人</option>
+                                <option value="1">项目扶持</option>
+                                <option value="2">两者结合</option>
+
+                            </select>
+                        </td>
+                        <td class="tName">房屋结构</td>
+                        <td>
+                            <select name="ddlHouseStructure" id="ddlHouseStructure">
+                                <option selected="selected" value="">所有</option>
+                                <option value="砖混(框架)">砖混(框架)</option>
+                                <option value="泥砖房">泥砖房</option>
+                                <option value="危房">危房</option>
+
+                            </select>
+                        </td>
+                        <td class="tName">水库类型</td>
+                        <td>
+                            <select name="ddlReservoirType" id="ddlReservoirType" style="width:80px;">
+                                <option value="">全部</option>
+                                <option selected="selected" value="大中型">大中型</option>
+                                <option value="大型">大型</option>
+                                <option value="中型">中型</option>
+                                <option value="小型">小型</option>
+
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" align="center">
+                            <div style="float:left;width:40%;text-align:left;">&nbsp;说明：红色表示后扶人口与标准数据不一致</div>
+                            <div style="float:right;width:60%;text-align:left;">
+                                <input type="button" name="btnSearch" value="添加" id="btnSearch" class="btn02">&nbsp;
+                                <input type="submit" name="btnExportExcel" value="导出Excel" id="btnExportExcel" class="btn03">&nbsp;
+                                <input type="button" name="btnOutput2" value="柱状图" onclick="tosubmit1()" id="btnOutput2" class="btn03">
+                                <input name="btnRtrunParentLevel" type="button" id="btnRtrunParentLevel" value="返回上级" onclick="queryReturnParentCode()" class="btn03"
+                                    style="display:none;">
+
+                            </div>
+                        </td>
+                    </tr>
+                    <tr style="display:none">
+                        <td colspan="6">
+                            <span id="lbSUM"></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div style="padding:3px;">
+    	<div id="jqGridPager"></div>
+	    <!-- 菜单管理页面组件 -->
+	   	<table id="jqGrid"></table>
+    </div>
+    <script src="${rc.contextPath}/statics/js/sys/user.js"></script>
+</body>
+</html>

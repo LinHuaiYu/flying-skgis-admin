@@ -1,0 +1,269 @@
+{
+	"menuList": [
+		{
+			"icon": "fa fa-cog",
+			"list": [
+				{
+					"icon": "fa fa-user",
+					"list": null,
+					"menuId": 2,
+					"name": "管理员列表",
+					"open": null,
+					"orderNum": 1,
+					"parentId": 1,
+					"parentName": null,
+					"perms": null,
+					"type": 1,
+					"url": "sys/user.html"
+				},
+				{
+					"icon": "fa fa-user-secret",
+					"list": null,
+					"menuId": 3,
+					"name": "角色管理",
+					"open": null,
+					"orderNum": 2,
+					"parentId": 1,
+					"parentName": null,
+					"perms": null,
+					"type": 1,
+					"url": "sys/role.html"
+				},
+				{
+					"icon": "fa fa-th-list",
+					"list": null,
+					"menuId": 4,
+					"name": "菜单管理",
+					"open": null,
+					"orderNum": 3,
+					"parentId": 1,
+					"parentName": null,
+					"perms": null,
+					"type": 1,
+					"url": "sys/menu.html"
+				},
+				{
+					"icon": "fa fa-bug",
+					"list": null,
+					"menuId": 5,
+					"name": "SQL监控",
+					"open": null,
+					"orderNum": 4,
+					"parentId": 1,
+					"parentName": null,
+					"perms": null,
+					"type": 1,
+					"url": "druid/sql.html"
+				},
+				{
+					"icon": "fa fa-tasks",
+					"list": null,
+					"menuId": 6,
+					"name": "定时任务",
+					"open": null,
+					"orderNum": 5,
+					"parentId": 1,
+					"parentName": null,
+					"perms": null,
+					"type": 1,
+					"url": "sys/schedule.html"
+				},
+				{
+					"icon": "fa fa-sun-o",
+					"list": null,
+					"menuId": 27,
+					"name": "参数管理",
+					"open": null,
+					"orderNum": 6,
+					"parentId": 1,
+					"parentName": null,
+					"perms": "sys:config:list,sys:config:info,sys:config:save,sys:config:update,sys:config:delete",
+					"type": 1,
+					"url": "sys/config.html"
+				},
+				{
+					"icon": "fa fa-file-image-o",
+					"list": null,
+					"menuId": 30,
+					"name": "文件上传",
+					"open": null,
+					"orderNum": 6,
+					"parentId": 1,
+					"parentName": null,
+					"perms": "sys:oss:all",
+					"type": 1,
+					"url": "sys/oss.html"
+				},
+				{
+					"icon": "fa fa-file-text-o",
+					"list": null,
+					"menuId": 29,
+					"name": "系统日志",
+					"open": null,
+					"orderNum": 7,
+					"parentId": 1,
+					"parentName": null,
+					"perms": "sys:log:list",
+					"type": 1,
+					"url": "sys/log.html"
+				},
+				{
+					"icon": "fa fa-rocket",
+					"list": null,
+					"menuId": 28,
+					"name": "代码生成器",
+					"open": null,
+					"orderNum": 8,
+					"parentId": 1,
+					"parentName": null,
+					"perms": "sys:generator:list,sys:generator:code",
+					"type": 1,
+					"url": "sys/generator.html"
+				}
+			],
+			"menuId": 1,
+			"name": "系统管理",
+			"open": null,
+			"orderNum": 0,
+			"parentId": 0,
+			"parentName": null,
+			"perms": null,
+			"type": 0,
+			"url": null
+		},
+		{
+			"icon": null,
+			"list": [
+				{
+					"icon": "",
+					"list": null,
+					"menuId": 31,
+					"name": "系统参数",
+					"open": null,
+					"orderNum": 1,
+					"parentId": 36,
+					"parentName": null,
+					"perms": null,
+					"type": 1,
+					"url": "generator/systemparam.html"
+				},
+				{
+					"icon": "",
+					"list": null,
+					"menuId": 43,
+					"name": "公告管理",
+					"open": null,
+					"orderNum": 2,
+					"parentId": 36,
+					"parentName": null,
+					"perms": null,
+					"type": 1,
+					"url": "generator/information.html"
+				},
+				{
+					"icon": " ",
+					"list": null,
+					"menuId": 54,
+					"name": "新手资讯",
+					"open": null,
+					"orderNum": 3,
+					"parentId": 36,
+					"parentName": null,
+					"perms": null,
+					"type": 1,
+					"url": "generator/start.html"
+				},
+				{
+					"icon": "",
+					"list": null,
+					"menuId": 55,
+					"name": "轮播图片",
+					"open": null,
+					"orderNum": 4,
+					"parentId": 36,
+					"parentName": null,
+					"perms": null,
+					"type": 1,
+					"url": "generator/imageresource.html"
+				},
+				{
+					"icon": " ",
+					"list": null,
+					"menuId": 60,
+					"name": "商城矿机",
+					"open": null,
+					"orderNum": 5,
+					"parentId": 36,
+					"parentName": null,
+					"perms": null,
+					"type": 1,
+					"url": "generator/shopmachine.html"
+				}
+			],
+			"menuId": 36,
+			"name": "APP管理",
+			"open": null,
+			"orderNum": 0,
+			"parentId": 0,
+			"parentName": null,
+			"perms": null,
+			"type": 0,
+			"url": null
+		},
+		{
+			"icon": null,
+			"list": [
+				{
+					"icon": "",
+					"list": null,
+					"menuId": 48,
+					"name": "用户列表",
+					"open": null,
+					"orderNum": 1,
+					"parentId": 53,
+					"parentName": null,
+					"perms": null,
+					"type": 1,
+					"url": "generator/user.html"
+				}
+			],
+			"menuId": 53,
+			"name": "用户管理",
+			"open": null,
+			"orderNum": 3,
+			"parentId": 0,
+			"parentName": null,
+			"perms": null,
+			"type": 0,
+			"url": null
+		},
+		{
+			"icon": null,
+			"list": [
+				{
+					"icon": "",
+					"list": null,
+					"menuId": 37,
+					"name": "价格修改记录",
+					"open": null,
+					"orderNum": 1,
+					"parentId": 42,
+					"parentName": null,
+					"perms": null,
+					"type": 1,
+					"url": "generator/pricechangerecord.html"
+				}
+			],
+			"menuId": 42,
+			"name": "记录管理",
+			"open": null,
+			"orderNum": 4,
+			"parentId": 0,
+			"parentName": null,
+			"perms": null,
+			"type": 0,
+			"url": null
+		}
+	],
+	"code": 0
+}

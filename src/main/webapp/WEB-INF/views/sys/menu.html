@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	#parse("common/common.html")
+</head>
+<body>
+	<div class="main">
+        <div class="current">
+	        <div class="curCon"><span>当前位置：</span> 菜单管理</div>
+        </div>
+    </div>
+    <div id="Table1">
+        <div>
+            <table class="table01">
+                <tbody>
+                    <tr>
+                        <td colspan="6" align="center">
+                            <div style="float:right;width:60%;text-align:left;">
+                                <input type="button" name="btnSave" value="添加菜单"  onclick="openAddWin()" class="btn03" >&nbsp;
+                                <input type="button" name="btnUpdate" value="修改菜单" onclick="openUpdateWin()" class="btn03">&nbsp;
+                                <input type="button" name="btnDelete" value="删除菜单" onclick="delFun()" class="btn03">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div style="padding:5px;">
+	    <!-- 菜单管理页面组件 -->
+	   	<table id="menuTable"></table>
+    </div>
+    <script src="${rc.contextPath}/statics/js/sys/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>梅州水库移民动态监管地理信息应用系统</title>
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <link type="text/css" rel="stylesheet" href="../statics/css/reset.css" />
+    <link type="text/css" rel="stylesheet" href="../statics/css/style.css" />
+    <script type="text/javascript" src="../statics/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../statics/js/menu.js"></script>
+    <script type="text/javascript" src="../statics/js/doT.min.js"></script>
+    <script type="text/javascript">
+        function openRight(n, url) {
+            if (n == 0) {
+                window.parent.mFrame.cols = "0,0,*";
+            }
+            else {
+                window.parent.mFrame.cols = "152,9,*";
+            }
+            
+            if (url != "") {
+                window.open(url, "right");
+            }
+        }
+        function SetCookie(name, value) {
+            var Days = 30;
+            var exp = new Date();
+            exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+            document.cookie = name + "=" + escape(value) + ";path=/;expires=" + exp.toGMTString();
+        }
+        /* function setLink() {
+            var currsel = 0;
+            for (var i = 0; i < $("#ulList li").length; i++) {
+                if ($("#ulList li")[i].className == "l_sel") {
+                    currsel = i;
+                    break;
+                }
+            }
+            SetCookie('ymgis_datamanage', '1');
+            $("#ulList li a")[currsel].click();
+        } */
+        /* function openwin() {
+            var d = new Date();
+            var year, month, day, h, m, s;
+            year = d.getFullYear();
+            month = d.getMonth();
+            day = d.getDay();
+            h = d.getHours();
+            m = d.getMinutes();
+            s = d.getSeconds();
+            var windowstr;
+            windowstr = "Main";
+            window.opener = null;
+            windowstr = window.open('http://113.108.186.71/', windowstr, 'top=0, left=0, toolbar=no, menubar=no, scrollbars=no,resizable=no,location=no, status=no');
+            windowstr.moveTo(0, -25);
+            windowstr.resizeTo(screen.width, screen.height);
+        } */
+        //渲染一级菜单页面
+        function renderMenuList(){
+        	var url = "../sys/menu/permsFirst";
+    		$.ajax({
+    			type : "GET",
+    			url : url,
+    			dataType : "json",
+    			data : {},
+    			success : function(ret) {
+    				if(ret.code==0){
+    					//获取渲染的模板
+    					var listData = doT.template($('#list-data-temp').html());
+    		            $('#ulList').html(listData(ret.menuList));
+    				}
+    			}
+    		});
+        	
+        }
+    </script>
+</head>
+<body>
+    <form name="form1" method="post">
+
+    <div class="head" id="head">
+        <div class="h_logo"></div>
+        <div id="c_User" class="c_User">
+            <span class="user">当前用户：<span id="lblFullName">李如念</span>&nbsp;&nbsp;所属地区：<span id="lblAreaName">梅县</span></span> |
+            <a onclick="delCookie(&#39;ymgis_datamanage&#39;);" id="btnLogout" href="javascript:__doPostBack(&#39;btnLogout&#39;,&#39;&#39;)">退出</a>
+        </div>
+    </div>
+    <div class="h_nav">
+        <div class="menu">
+            <ul id="ulList">
+                <!-- <li onclick="sel(this)" class="l_sel"><a href="#" onclick="openRight(0,&#39;/main.html&#39;)"><span><img src="../statics/images/i00.gif">首页</span></a></li>
+                <li onclick="sel(this)" class=""><a href="../common/menu.html" target="left" onclick="openRight(1,&#39;&#39;)"><span><img src="../statics/images/i09.gif">人口管理</span></a></li>
+                <li onclick="sel(this)" class=""><a href="http://113.108.186.71/ymgis/hmplan/left3.aspx" target="left" onclick="openRight(1,&#39;&#39;)"><span><img src="../statics/images/i02.gif">计划编制</span></a></li>
+                <li onclick="sel(this)" class=""><a href="http://113.108.186.71/ymgis/ProjectManage/left3.aspx" target="left" onclick="openRight(1,&#39;&#39;)"><span><img src="../statics/images/i14.gif">项目进度</span></a></li>
+                <li onclick="sel(this)" class=""><a href="http://113.108.186.71/ymgis/ProjectWareHouse/left3.aspx" target="left" onclick="openRight(1,&#39;&#39;)"><span><img src="../statics/images/i13.gif">规划管理</span></a></li>
+                <li onclick="sel(this)" class=""><a href="http://113.108.186.71/ymgis/hmplan/left_yjxmgl.aspx" target="left" onclick="openRight(1,&#39;&#39;)"><span><img src="../statics/images/i02.gif">省级预留</span></a></li>
+                <li onclick="sel(this)" class=""><a href="http://113.108.186.71/ymgis/fundsmanage/side.aspx" target="left" onclick="openRight(1,&#39;&#39;)"><span><img src="../statics/images/i05.gif">资金管理</span></a></li>
+                <li onclick="sel(this)" class=""><a href="http://113.108.186.71/ymgis/Summary/left8.aspx" target="left" onclick="openRight(1,&#39;&#39;)"><span><img src="../statics/images/i07.gif">统计报表</span></a></li>
+                <li id="liJKPG" onclick="sel(this)" class=""><a href="http://113.108.186.71/ymgis/Summary/left10.aspx" target="left" onclick="openRight(1,&#39;&#39;)"><span><img src="../statics/images/i02.gif">监测评估</span></a></li>
+                <li onclick="sel(this)" class=""><a href="http://113.108.186.71/ymgis/Summary/left9.aspx" target="left" onclick="openRight(1,&#39;&#39;)"><span><img src="../statics/images/i06.gif">末梢监督</span></a></li>
+                <li onclick="sel(this)" class=""><a href="http://113.108.186.71/ymgis/Settle/left9.aspx" target="left" onclick="openRight(1,&#39;SMS/SendMsg.aspx&#39;)"><span><img src="../statics/images/menu_xxhd.jpg">安置管理</span></a></li>
+                <li id="liJBZL" onclick="sel(this)" class=""><a href="http://113.108.186.71/ymgis/baseinfo/side.aspx" target="left" onclick="openRight(1,&#39;&#39;)"><span><img src="../statics/images/i03.gif">基本资料</span></a></li>
+                <li id="liZHGL" name="liZHGL" onclick="sel(this)" class=""><a href="http://113.108.186.71/ymgis/Sys/side.aspx" target="left" onclick="openRight(1,&#39;&#39;)"><span><img src="../statics/images/i08.gif">综合管理</span></a></li> -->
+            </ul>
+        </div>
+        <div class="mSel">
+            <img src="../statics/images/m_01.gif" alt="收缩|展开" id="imgHead" onclick="javascript:setHead();" />
+        </div>
+    </div>
+	
+	<script id="list-data-temp" type="text/x-dot-template">
+		<li onclick="sel(this)" class="l_sel"><a href="#" onclick="openRight(0,&#39;/main.html&#39;)"><span><img src="../statics/images/i00.gif">首页</span></a></li>
+    	{{ for(var i=0;i<it.length;i++){ }}
+    		<li onclick="sel(this)" class="">
+				<a href="../common/menu.html?menuId={{=it[i].menuId}}" target="left" onclick="openRight(2,&#39;../guide/{{=it[i].url}}&#39;)"><span><img src="../statics/images/{{=it[i].icon}}">{{=it[i].name}}</span></a>
+			</li>
+    	{{ } }}
+	</script>
+    <script type="text/javascript">
+        //setLink();
+        renderMenuList();
+    </script>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	#parse("common/common.html")
+</head>
+<body>
+	<div class="main">
+        <div class="current">
+	        <div class="curCon"><span>当前位置：</span> 区域管理</div>
+        </div>
+    </div>
+    <div id="Table1">
+        <div>
+            <table class="table01">
+                <tbody>
+                    <tr>
+                        <td colspan="6" align="center">
+                            <div style="float:right;width:60%;text-align:left;">
+                                <input type="button" name="btnSave" value="添加区域"  onclick="openAddWin()" class="btn03" >&nbsp;
+                                <input type="button" name="btnUpdate" value="修改区域" onclick="openUpdateWin()" class="btn03">&nbsp;
+                                <input type="button" name="btnDelete" value="删除区域" onclick="delFun()" class="btn03">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="padding: 5px;">
+	        <!-- 菜单管理页面组件 -->
+		   	<table id="deptTable"></table>
+        </div>
+    </div>
+    
+    <script src="${rc.contextPath}/statics/js/sys/dept.js"></script>
+</body>
+</html>

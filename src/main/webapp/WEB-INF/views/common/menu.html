@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>梅州水库移民动态监管地理信息应用系统</title>
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<link type="text/css" rel="stylesheet" href="../statics/css/reset.css" />
+	<link type="text/css" rel="stylesheet" href="../statics/css/style.css" />
+	<script type="text/javascript" src="../statics/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../statics/js/menu.js"></script>
+	<script type="text/javascript" src="../statics/js/doT.min.js"></script>
+	<script type="text/javascript" src="../statics/js/common.js"></script>
+	<script type="text/javascript">
+	function getCookie(name) {
+        var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
+        if (arr != null) return unescape(arr[2]); return null;
+    }
+    function sel1(li) {
+        var li_list = document.getElementsByTagName("li");
+        for (var q = 0; q < li_list.length; q++) {
+            if (li_list[q] == li) {
+                li_list[q].className = "l_sel";
+            }
+            else {
+                li_list[q].className = "";
+            }
+        }
+    }
+    //window.parent.open('baseinfoindex_population.aspx', 'right');
+</script>
+</head>
+<body>
+<div class="side" id="side-list">
+    <div class="sTitle">
+        <div class="sTitle_con"><span>汇总统计</span></div>
+    </div>
+    <!-- 48 -->
+    <div class="sidePan" style="height:152px;">
+        <ul>
+            <li onclick="sel1(this);window.parent.open(&#39;../baseinfo/ResetlementStat.aspx&#39;,&#39;right&#39;);"><a>人口核定汇总</a></li>
+            <li onclick="sel1(this);window.parent.open(&#39;../baseinfo/ResetlementStat_CountryAudit.aspx&#39;,&#39;right&#39;);"><a>扶持方式汇总</a></li>
+            <li onclick="sel1(this);window.parent.open(&#39;../baseinfo/ResetlementStat_Allow.aspx&#39;,&#39;right&#39;);"><a>省市认可移民汇总</a></li>
+            <li onclick="sel(this);window.parent.open(&#39;../Summary/GetVillageCount.aspx&#39;,&#39;right&#39;);"><a>人口分布统计</a></li>
+        </ul>
+    </div>
+    <div class="sTitle">
+        <div class="sTitle_con"><span>人口核定</span></div>
+    </div>
+    <div id="dvdel" class="sidePan" style="height:96;">
+        <ul>
+            <li onclick="sel1(this);window.parent.open(&#39;ResetlementPopulationList.aspx&#39;,&#39;right&#39;);"><a>移民人口查询</a></li>
+            <li onclick="sel1(this);window.parent.open(&#39;ResetlementList.aspx&#39;,&#39;right&#39;);"><a>移民户查询</a></li>
+        </ul>
+    </div>
+</div>
+<script id="list-data-temp" type="text/x-dot-template">
+{{ for(var i=0;i<it.length;i++){ }}
+	<div class="sTitle">
+        <div class="sTitle_con"><span>{{=it[i].name}}</span></div>
+    </div>	
+	<div class="sidePan" style="height:{{=it[i].list.length!=0?it[i].list.length*36:36}}px;">
+        <ul>
+			{{ for(var j=0;j<it[i].list.length;j++){ }}
+            	<li onclick="sel1(this);window.parent.open(&#39;../{{=it[i].list[j].url}}&#39;,&#39;right&#39;);"><a>{{=it[i].list[j].name}}</a></li>
+			{{ } }}
+        </ul>
+    </div>
+{{ } }}
+</script>
+<script type="text/javascript">
+    var IsSupperAdmin=0;
+    if (getCookie("ymgis_datamanage") == "1" && IsSupperAdmin == 1) {
+        document.getElementById("li_ResetlementAdd").style.display = "";
+        $("#dvdel").css("height", "152");
+    }
+    //初始化列表，将style中visibility值为hidden的全部隐藏
+    var sidePanList = getByClass(document, "sidePan");
+    for (var i = 0; i < sidePanList.length; i++) {
+        var pan =  $(sidePanList[i]);
+        if (pan.css("visibility") == "hidden") {
+            //折叠
+            var height=pan.css("height");
+            pan.data("height", height);
+            pan.height(33);
+            pan.css("visibility", "hidden");
+            pan.data("collapse", true);
+        }
+    }
+    //根据ClassName获取对象
+    function getByClass(oParent, nClass) {
+        var eLe = oParent.getElementsByTagName('*');
+        var aRrent = [];
+        for (var i = 0; i < eLe.length; i++) {
+            if (eLe[i].className == nClass) {
+                aRrent.push(eLe[i]);
+            }
+        }
+        return aRrent;
+    }
+    function rendMenuList(){
+    	var menuId = getQueryString("menuId");
+    	if(menuId!=null){
+    		var url = '../sys/menu/permSecond/'+menuId;
+    		$.ajax({
+    			type : "GET",
+    			url : url,
+    			dataType : "json",
+    			data : {},
+    			success : function(ret) {
+    				if(ret.code==0){
+    					console.log(ret);
+    					//获取渲染的模板
+    					var listData = doT.template($('#list-data-temp').html());
+    		            $('#side-list').html(listData(ret.menuList));
+    				}
+    			}
+    		});
+    	}
+    }
+    $(function(){ 
+    	rendMenuList();
+        $(".sTitle").click(function(){
+            var pan = $(this).next(".sidePan").first();
+            var collapse = pan.data("collapse");
+            if (collapse == undefined || collapse == false) {
+                //折叠
+                var height = pan.height();
+                if(height != 33)
+                {
+                    pan.data("height",height);
+                }
+                pan.height(33);
+                pan.css("visibility","hidden");
+                pan.data("collapse", true);
+            }
+            else
+            {
+                //展开
+                var dataHeight = pan.data("height");
+                if(dataHeight != undefined)
+                {
+                    pan.height(dataHeight);
+                }
+                pan.css("visibility","visible");
+                pan.data("collapse", false);
+            }
+        });
+    });
+</script>
+
+</body></html>

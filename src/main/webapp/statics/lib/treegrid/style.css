@@ -1,0 +1,20 @@
+.treegrid-thead th {
+    border: 0px;
+   	background: #e9f3ff !important;
+   	border-bottom: 1px solid #5395c9 !important;
+   	border-left: 1px solid #5395c9 !important;
+}
+.table-bordered {
+   border: 1px solid #5395c9 !important;
+}
+.treegrid-tbody td {
+    border: 0 !important;
+    border-left: 1px solid #5395c9 !important;
+    border-bottom: 1px solid #5395c9 !important;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.table{
+	font-size: 12px;
+}

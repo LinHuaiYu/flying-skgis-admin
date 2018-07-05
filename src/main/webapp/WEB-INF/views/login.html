@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	    <title>梅县水库移民动态监管地理信息应用系统</title>
+	    <link rel="stylesheet" type="text/css" href="${rc.contextPath}statics/css/reset.css" />
+	    <link rel="stylesheet" type="text/css" href="${rc.contextPath}statics/css/login.css" />
+	    <script src="${rc.contextPath}statics/js/jquery.min.js" type="text/javascript"></script>
+	    <!-- 表单验证 -->
+		<script src="${rc.contextPath}/statics/js/jquery.validate.js"></script>
+		<script src="${rc.contextPath}/statics/js/messages_zh.js"></script>
+		<!-- 登陆 -->
+	    <script src="${rc.contextPath}statics/js/login.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<form name="myForm" id="myForm" method="post" action="javascript:login()">
+			<div class="wrap">
+				<div class="login">
+					<table class="login_main">
+						<tbody>
+							<tr>
+								<td>用户名：</td>
+								<td colspan="2">
+									<input name="txtUserName" type="text" id="txtUserName" tabindex="1" class="ipt_user" />
+								</td>
+							</tr>
+							<tr>
+								<td>密&nbsp;&nbsp;&nbsp;码：</td>
+								<td colspan="2"><input name="txtPWD" type="password" id="txtPWD" class="ipt_pass" /></td>
+							</tr>
+							<tr>
+								<td>验证码：</td>
+								<td width="60px">
+									<input name="text_CheckCode" type="text" id="text_CheckCode" class="login_input"
+									onmouseover="this.style.background=&#39;#f1f1f1&#39;;"
+									style="width: 50px; height: 20px; padding-left: 4px; border: 1px #7b99bf solid; line-height: 20px;"
+									onmouseout="this.style.background=&#39;#FFFFFF&#39;" size="8" />
+								</td>
+								<td>
+									<a href="javascript:void(0)" style="color: Blue"> 
+										<img alt="点击刷新验证码" onclick="captcha()" name="ImgBtnCheckCode" border="0" style="height: 23px"  />
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td colspan="2">
+									<input type="submit" name="btnLogin" value="登 录" id="btnLogin" class="btn01" /> 
+									<input type="reset" class="btn01" value="重 置" />
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			
+		</form>
+	
+	</body>
+</html>

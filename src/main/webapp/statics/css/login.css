@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+body { background: #0279c3; font-size:12px; font-family: Verdana, Arial, Helvetica, sans-serif; color:#333;}
+a { color:#95c8fe; }
+a:hover { text-decoration: underline; }
+.wrap { width:100%; margin:0 auto; margin-top:35px; vertical-align:middle;}
+.login { position:relative; width:878px; height:497px; background: url(../images/logbg.png) no-repeat !important; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/logbg.png'); 
+ margin:0 auto;}
+.login_main { position:absolute; left: 344px; top:266px;}
+
+td { height:30px;}
+.ipt_user { width:135px; height:20px; padding-left:20px; background: #fff url(../images/i01.gif) 0 -162px no-repeat; border:1px #7b99bf solid; line-height:20px;}
+.ipt_pass { width:135px; height:20px; padding-left:20px; background: #fff url(../images/i01.gif) 0 -184px no-repeat; border:1px #7b99bf solid; line-height:20px;}
+/**/input { border:0; color:#0a246a; font-size:12px;}
+.btn01 { width:65px; color:#fff; height:23px; margin-right:4px; padding:0; background: url(../images/t01.gif) 0 -123px no-repeat; font-weight:bold; line-height:23px; cursor:pointer; overflow:hidden;}
+.btn02 { width:65px; color:#fff; height:23px; background: url(../images/t01.gif) 0 -123px no-repeat; line-height:22px; cursor:pointer;}
+
+.copyright { position:absolute; left: 155px; bottom:6px; color:#95c8fe; text-align:center;}
+
+.link { position:absolute;left: 742px;top: 375px;text-align:center;}
+
+.error{
+	color:red;
+}

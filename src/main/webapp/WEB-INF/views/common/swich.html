@@ -1,0 +1,35 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link type="text/css" rel="stylesheet" href="../statics/css/reset.css" />
+<link type="text/css" rel="stylesheet" href="../statics/css/style.css" />
+<script type="text/javascript">
+	var currentSwitchStage = 1;
+
+function setCon()
+{
+	var obj = parent.document.getElementById("mFrame");
+	var sImg = document.getElementById("imgSwich");
+	if(currentSwitchStage == 1)
+	{
+		obj.cols="0,9,*";
+		currentSwitchStage = 0;
+		sImg.src="../statics/images/s_02.gif";
+	}
+	else
+	{
+		currentSwitchStage = 1;
+		obj.cols="152,9,*";
+		sImg.src="../statics/images/s_01.gif";
+	}
+}
+</script>
+
+</head>
+<body>
+<table height="100%" border="0" cellpadding="0" cellspacing="0" class="swich">
+	<tbody><tr><td><a href="javascript:setCon();"><img src="../statics/images/s_01.gif" id="imgSwich"></a></td>
+	</tr>
+</tbody></table>
+
+</body></html>

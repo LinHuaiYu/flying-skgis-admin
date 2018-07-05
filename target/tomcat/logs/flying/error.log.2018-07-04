@@ -1,0 +1,210 @@
+[ERROR][2018-07-04 11:21:58] org.apache.velocity.tools.view.XMLToolboxManager.validateToolInfo(XMLToolboxManager.java:149) Tool has no key defined! 
+[ERROR][2018-07-04 11:21:58] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource '404.html' in any resource loader. 
+[ERROR][2018-07-04 15:57:12] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource 'index.html' in any resource loader. 
+[ERROR][2018-07-04 15:57:12] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource '500.html' in any resource loader. 
+[ERROR][2018-07-04 16:02:41] org.apache.velocity.tools.view.XMLToolboxManager.validateToolInfo(XMLToolboxManager.java:149) Tool has no key defined! 
+[ERROR][2018-07-04 16:02:53] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource 'index_files/index.html' in any resource loader. 
+[ERROR][2018-07-04 16:02:53] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource 'index_files/swich.html' in any resource loader. 
+[ERROR][2018-07-04 16:02:53] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource 'index_files/saved_resource.html' in any resource loader. 
+[ERROR][2018-07-04 16:02:53] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource '500.html' in any resource loader. 
+[ERROR][2018-07-04 16:02:53] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource '404.html' in any resource loader. 
+[ERROR][2018-07-04 16:03:57] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource 'saved_resource.html' in any resource loader. 
+[ERROR][2018-07-04 16:03:57] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource 'swich.html' in any resource loader. 
+[ERROR][2018-07-04 16:18:35] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource 'common/GIS/main.html' in any resource loader. 
+[ERROR][2018-07-04 16:19:11] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource 'common/main.html' in any resource loader. 
+[ERROR][2018-07-04 16:19:32] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource 'common/common/head.html' in any resource loader. 
+[ERROR][2018-07-04 16:27:51] org.apache.velocity.tools.view.XMLToolboxManager.validateToolInfo(XMLToolboxManager.java:149) Tool has no key defined! 
+[ERROR][2018-07-04 16:27:58] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource 'swich.html' in any resource loader. 
+[ERROR][2018-07-04 16:27:58] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource '500.html' in any resource loader. 
+[ERROR][2018-07-04 16:27:58] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource '404.html' in any resource loader. 
+[ERROR][2018-07-04 16:34:12] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource 'menu.html' in any resource loader. 
+[ERROR][2018-07-04 18:44:50] org.apache.velocity.tools.view.XMLToolboxManager.validateToolInfo(XMLToolboxManager.java:149) Tool has no key defined! 
+[ERROR][2018-07-04 18:48:48] org.apache.velocity.tools.view.XMLToolboxManager.validateToolInfo(XMLToolboxManager.java:149) Tool has no key defined! 
+[ERROR][2018-07-04 18:52:13] org.apache.velocity.tools.view.XMLToolboxManager.validateToolInfo(XMLToolboxManager.java:149) Tool has no key defined! 
+[ERROR][2018-07-04 18:52:19] com.flying.utils.FlyingExceptionHandler.resolveException(FlyingExceptionHandler.java:46) 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'm.parentId' in 'where clause'
+### The error may exist in com/flying/dao/SysMenuDao.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select m.*,(select p.name from sys_menu p where p.menu_id = m.parent_id) as parentName     from sys_menu m    WHERE  m.parentId = ?          order by m.order_num asc
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'm.parentId' in 'where clause'
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'm.parentId' in 'where clause' 
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'm.parentId' in 'where clause'
+### The error may exist in com/flying/dao/SysMenuDao.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select m.*,(select p.name from sys_menu p where p.menu_id = m.parent_id) as parentName     from sys_menu m    WHERE  m.parentId = ?          order by m.order_num asc
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'm.parentId' in 'where clause'
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'm.parentId' in 'where clause'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:231)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:75)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:447)
+	at com.sun.proxy.$Proxy42.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:231)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:137)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:75)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy47.queryList(Unknown Source)
+	at com.flying.service.impl.SysMenuServiceImpl.queryList(SysMenuServiceImpl.java:72)
+	at com.flying.service.impl.SysMenuServiceImpl$$FastClassBySpringCGLIB$$7d05c92c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:721)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at com.alibaba.druid.support.spring.stat.DruidStatInterceptor.invoke(DruidStatInterceptor.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:656)
+	at com.flying.service.impl.SysMenuServiceImpl$$EnhancerBySpringCGLIB$$aedf5fe4.queryList(<generated>)
+	at com.flying.service.impl.SysMenuServiceImpl$$FastClassBySpringCGLIB$$7d05c92c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:721)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at com.alibaba.druid.support.spring.stat.DruidStatInterceptor.invoke(DruidStatInterceptor.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:656)
+	at com.flying.service.impl.SysMenuServiceImpl$$EnhancerBySpringCGLIB$$d9aaeeca.queryList(<generated>)
+	at com.flying.controller.SysMenuController.permsFirst(SysMenuController.java:94)
+	at com.flying.controller.SysMenuController$$FastClassBySpringCGLIB$$885fb1a8.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:721)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.apache.shiro.spring.security.interceptor.AopAllianceAnnotationsAuthorizingMethodInterceptor$1.proceed(AopAllianceAnnotationsAuthorizingMethodInterceptor.java:82)
+	at org.apache.shiro.authz.aop.AuthorizingMethodInterceptor.invoke(AuthorizingMethodInterceptor.java:39)
+	at org.apache.shiro.spring.security.interceptor.AopAllianceAnnotationsAuthorizingMethodInterceptor.invoke(AopAllianceAnnotationsAuthorizingMethodInterceptor.java:115)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at com.alibaba.druid.support.spring.stat.DruidStatInterceptor.invoke(DruidStatInterceptor.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:656)
+	at com.flying.controller.SysMenuController$$EnhancerBySpringCGLIB$$bd350849.permsFirst(<generated>)
+	at com.flying.controller.SysMenuController$$FastClassBySpringCGLIB$$885fb1a8.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:721)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.apache.shiro.spring.security.interceptor.AopAllianceAnnotationsAuthorizingMethodInterceptor$1.proceed(AopAllianceAnnotationsAuthorizingMethodInterceptor.java:82)
+	at org.apache.shiro.authz.aop.AuthorizingMethodInterceptor.invoke(AuthorizingMethodInterceptor.java:39)
+	at org.apache.shiro.spring.security.interceptor.AopAllianceAnnotationsAuthorizingMethodInterceptor.invoke(AopAllianceAnnotationsAuthorizingMethodInterceptor.java:115)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at com.alibaba.druid.support.spring.stat.DruidStatInterceptor.invoke(DruidStatInterceptor.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:656)
+	at com.flying.controller.SysMenuController$$EnhancerBySpringCGLIB$$bfa5400d.permsFirst(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.flying.xss.XssFilter.doFilter(XssFilter.java:23)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'm.parentId' in 'where clause'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:939)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2931)
+	at com.alibaba.druid.wall.WallFilter.preparedStatement_execute(WallFilter.java:601)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:131)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy66.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434)
+	... 109 more
+[ERROR][2018-07-04 18:52:57] org.apache.velocity.tools.view.XMLToolboxManager.validateToolInfo(XMLToolboxManager.java:149) Tool has no key defined! 
+[ERROR][2018-07-04 18:53:03] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource '404.html' in any resource loader. 
+[ERROR][2018-07-04 19:45:19] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource 'common/guide/system.html' in any resource loader. 
+[ERROR][2018-07-04 19:45:19] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource '500.html' in any resource loader. 
+[ERROR][2018-07-04 20:35:18] org.apache.velocity.tools.view.XMLToolboxManager.validateToolInfo(XMLToolboxManager.java:149) Tool has no key defined! 
+[ERROR][2018-07-04 20:35:28] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource '404.html' in any resource loader. 
+[ERROR][2018-07-04 20:41:41] org.apache.velocity.tools.view.XMLToolboxManager.validateToolInfo(XMLToolboxManager.java:149) Tool has no key defined! 
+[ERROR][2018-07-04 20:41:48] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource '404.html' in any resource loader. 
+[ERROR][2018-07-04 20:44:06] org.apache.velocity.tools.view.XMLToolboxManager.validateToolInfo(XMLToolboxManager.java:149) Tool has no key defined! 
+[ERROR][2018-07-04 20:44:13] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource '404.html' in any resource loader. 
+[ERROR][2018-07-04 21:02:49] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource 'modules/sys/menu.html' in any resource loader. 
+[ERROR][2018-07-04 21:02:49] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource '500.html' in any resource loader. 
+[ERROR][2018-07-04 21:02:49] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource 'modules/sys/role.html' in any resource loader. 
+[ERROR][2018-07-04 21:02:50] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource 'modules/sys/user.html' in any resource loader. 
+[ERROR][2018-07-04 21:02:56] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource 'modules/sys/dept.html' in any resource loader. 
