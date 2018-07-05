@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	#parse("common/common.html")
+    <script type="text/javascript" src="${rc.contextPath}/statics/js/sys/menu-upd.js"></script>
+</head>
+<body>
+	<div class="main">
+        <div class="current">
+	        <div class="curCon"><span>当前位置：</span> 菜单添加</div>
+        </div>
+    </div>
+	<form id="myForm">
+		<div>
+			<input name="menuId" id="menuId" type="hidden"  class="input" style="width:60%"  value="">
+			<input name="parentId" id="parentId" type="hidden"  class="input" style="width:60%"  value="">
+		</div>
+	    <div id="Table1">
+	        <div>
+	            <table class="table01">
+	                <tbody>
+	                	<tr>
+	                        <td class="tName" colspan="3">菜单类型</td>
+	                        <td colspan="3">
+	                            <label class="radio-inline">
+									<input type="radio" name="type"  value="0" /> 目录
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="type" value="1" /> 菜单
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="type" value="2" /> 按钮
+								</label>
+	                        </td>
+	                    </tr>
+	                    <tr>
+	                        <td class="tName" colspan="3">菜单名称</td>
+	                        <td colspan="3">
+	                            <input name="name" type="text" id="name" class="input" style="width:60%"  value="">&nbsp;
+	                        </td>
+	                    </tr>
+	                    <tr>
+	                        <td class="tName" colspan="3">上级菜单</td>
+	                        <td colspan="3">
+	                            <input name="parentName" type="text" id="parentName" class="input"  style="width:60%"  style="cursor:pointer;"  readonly="readonly" placeholder="上级区域">&nbsp;
+	                        </td>
+	                    </tr>
+	                    <tr>
+	                        <td class="tName" colspan="3">菜单URL</td>
+	                        <td colspan="3">
+	                            <input name="url" type="text" id="url" class="input" style="width:60%"  value="">&nbsp;
+	                        </td>
+	                    </tr>
+	                    <tr>
+	                        <td class="tName" colspan="3">授权标识</td>
+	                        <td colspan="3">
+	                            <input type="text"  name="perms" id="perms" class="input" style="width:60%"  value="">&nbsp;
+	                        </td>
+	                    </tr>
+	                    <tr>
+	                        <td class="tName" colspan="3">菜单排序</td>
+	                        <td colspan="3">
+	                            <input  type="number" name="orderNum" id="orderNum" class="input" style="width:60%"  value="">&nbsp;
+	                        </td>
+	                    </tr>
+	                    <tr>
+	                        <td colspan="6" align="center">
+	                            <div style="width:100%;text-align:center;">
+	                                <input type="submit" name="btnOutput2" value="保存" class="btn03">
+	                            </div>
+	                        </td>
+	                    </tr>
+	                </tbody>
+	            </table>
+	        </div>
+	    </div>	
+    </form>
+    
+    <!-- 选择菜单 树形-->
+	<div id="menuLayer" style="display: none;padding:10px;">
+		<ul id="menuTree" class="ztree"></ul>
+	</div>
+	
+</body>
+</html>

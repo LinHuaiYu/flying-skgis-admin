@@ -101,11 +101,11 @@ function openAddWin(){
 
 //更新
 function openUpdateWin(){
-	var deptId = getOneTreeGridId("menuTable");
-	if(deptId == false){
+	var menuId = getOneTreeGridId("menuTable");
+	if(menuId == false){
 		return ;
 	}
-	openWin(600,600,'修改菜单','./menu-upd.html?deptId='+deptId);
+	openWin(600,600,'修改菜单','./menu-upd.html?menuId='+menuId);
 }
 
 //删除
@@ -117,7 +117,7 @@ function delFun(){
 	confirm('确定要删除选中的记录？', function(){
         $.ajax({
             type: "POST",
-            url:  "./dept/delete",
+            url:  "./menu/delete",
             cache : false,
     		dataType : "json",
             data: {
