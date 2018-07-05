@@ -1,0 +1,2 @@
+[ERROR][2018-07-06 00:41:27] org.apache.velocity.tools.view.XMLToolboxManager.validateToolInfo(XMLToolboxManager.java:149) Tool has no key defined! 
+[ERROR][2018-07-06 00:41:34] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource '404.html' in any resource loader. 

@@ -1,0 +1,4 @@
+[WARN][2018-07-06 00:41:27] org.apache.velocity.tools.view.XMLToolboxManager.<init>(XMLToolboxManager.java:100) XMLToolboxManager has been deprecated. Please use org.apache.velocity.tools.ToolboxFactory instead. 
+[WARN][2018-07-06 00:41:27] org.apache.velocity.tools.view.servlet.ServletToolboxManager.<init>(ServletToolboxManager.java:131) ServletToolboxManager has been deprecated. Please use org.apache.velocity.tools.ToolboxFactory instead. 
+[ERROR][2018-07-06 00:41:27] org.apache.velocity.tools.view.XMLToolboxManager.validateToolInfo(XMLToolboxManager.java:149) Tool has no key defined! 
+[ERROR][2018-07-06 00:41:34] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource '404.html' in any resource loader. 
