@@ -7,7 +7,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 在册一次数据过滤
+ * 最后测一次数据过滤
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
