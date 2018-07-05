@@ -1,4 +1,4 @@
-package com.flying.annotation;
+﻿package com.flying.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -7,7 +7,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 数据过滤
+ * yoyoyoyoyoy数据过滤
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
